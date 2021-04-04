@@ -1,0 +1,93 @@
+<%- include("template/cabecera", {tituloweb: 'Home'}) %>
+    <div class="fondo">
+        <div class="hello d-flex">
+            <h1 class="txt_hello">HELLO<span>!</span></h1>
+            <h1>I'm Sharon<span>.</span></h1>
+            <h3>Front-end Developer<span>.</span></h3>
+        </div>
+        <div class="cards d-flex mb-9">
+            <div class="row">
+                <% for( let index = 0; index < 3; index++ ) { %>
+                    <div class="col-sm column d-flex">
+                        <div class="card d-flex">
+                            <img class="icon_cards d-flex" src="images/<%- cards_characteristics[index].icon %>" alt="icon-<%- cards_characteristics[index].name %>"> 
+                            <h1><%= cards_characteristics[index].name %> </h1>
+                            <p><%= cards_characteristics[index].description %> </p>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+            
+        </div>
+        <div id="skills" class="skills mt-9">
+            <h1 class="intro mt-9">MY SKILLS</h1>
+            <div class=" ml-lg-5 pl-lg-5 mr-lg-5 pr-lg-5 mt-5">
+                <div class="progress">
+                    <div class="morado">
+                        <h3 class="">HTML</h3>
+                    </div>
+                    <div class="progress-bar morado" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    
+                </div>
+                <div class="progress">
+                    <div class="azul">
+                        <h3 class="">Vue</h3>
+                    </div>
+                    <div class="progress-bar azul" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+                <div class="progress">
+                    <div class="morado">
+                        <h3 class="">Wordpress</h3>
+                    </div>
+                    <div class="progress-bar morado" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+                
+                <div class="progress">
+                    <div class="azul">
+                        <h3 class="">CSS</h3>
+                    </div>
+                    <div class="progress-bar azul" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">65%</div>
+                </div>
+                <div class="progress">
+                    <div class="morado">
+                        <h3 class="">JS</h3>
+                    </div>
+                    <div class="progress-bar morado" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">60%</div>
+                </div>
+                <div class="progress">
+                    <div class="azul">
+                        <h3 class="">Node</h3>
+                    </div>
+                    <div class="progress-bar azul" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+                <div class="progress">
+                    <div class="morado">
+                        <h3 class="">MySQL</h3>
+                    </div>
+                    <div class="progress-bar morado" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">80%</div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="work" class="work mt-9">
+            <h1 class="intro">MY WORK</h1>
+            <div class="works">
+                <div class="row row-work justify-content-center">
+                    <% for( let index = 0; index < 4; index++ ) { %>
+                        <div class="col-lg-3 column d-flex">
+                            <div class="cuadrado d-flex">
+                                <img src="/images/<%- work[index]%>" alt="">
+                                <div class="view_project">
+                                    <a href="http://ekkol.epizy.com/" target="_blank"><h3 class="d-flex">View <br>Project</h3></a>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+<%- include("template/footer") %>

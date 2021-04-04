@@ -1,0 +1,54 @@
+body{
+    background-color: #1F1F1F;
+}
+nav.navbar{
+    padding: 0;
+    position: fixed;
+    width:100%;
+    z-index: 111;
+}
+nav a.navbar-brand{
+    padding: 0.5% ;
+}
+nav .logo{
+    width:50%;
+    height:50%;
+}
+nav li.nav-item{
+    margin:0 2rem;
+    font-family:'Prompt', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.footer{
+    font-family:'Prompt', sans-serif;
+    border-radius: 0% !important;
+    text-align:center;
+    background-color: #0e606b;
+    width: 100%  !important;
+    color: white;
+    
+}
+.footer img{
+    margin: 0 .5%;
+    width: 2.5%;
+    height: 2.5%;
+    color: white;
+}
+@media screen and (max-width: 768px) {
+    nav li.nav-item{
+        margin:0 1rem;
+    }
+    nav.navbar{
+        position: static;
+        background-color: #1f1f1fe0;
+        
+    }
+    .footer img{
+        margin: 0% .5%;
+        width: 1.5rem;
+        height: 1.5rem;
+        color: white;
+    }
+}
+

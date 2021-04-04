@@ -1,0 +1,253 @@
+
+:root{
+    --span-hello-display: none;
+    --view-project:hidden;
+}
+.container.contact{
+    min-height:calc(100vh - 7.9rem);
+}
+div.fondo{
+    background-image: url("/images/fondo_.png");
+    background-color: #383838;
+    /* padding: 13% 3%; */
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: cover;
+    flex-direction: column;
+}
+div.hello{
+    /* background-image: url("/images/hello.png"); */
+    padding: 13% 3%;
+    /* background-repeat: no-repeat;
+    background-position: 30% 50%;
+    background-size: cover; */
+    flex-direction: column;
+    /* border-bottom: 0.5em solid white; */
+}
+.hello h1, .hello h3{
+    font-family:'Prompt', sans-serif;
+    text-align: right;
+    font-size: 4rem;
+    color: white;
+}
+.hello h1.txt_hello span{
+    display: var( --span-hello-display );
+}
+.hello h1.txt_hello{
+    font-weight: bold;
+    letter-spacing: 5px;
+    overflow: hidden;
+    
+    /* animation: hello_aparece 0.5s alternate linear 3; */
+    animation: hello_aparece 1.5s linear forwards;
+}
+@keyframes hello_aparece{
+    0%{margin-right: 80%;}
+    50%,80%,100%{margin-right: 0%; --span-hello-display: inline;color: white;}
+    65%{margin-right: 5%;color: #8747B8;}
+    90%{margin-right: 2%;}
+}
+.hello span{
+    color: #8747B8;
+}
+.cards{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* margin-bottom: 5%; */
+}
+.cards .row {
+    top:-1em;
+    position: absolute;
+    /* animation: subir_cards 1s linear forwards; */
+}
+@keyframes subir_cards{
+    to{top:-10em;}
+    from{top:-1em;}
+}
+
+.cards .card{
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-family:'Prompt', sans-serif;
+    background-color: #00BBD3;
+    width: 17vw;
+    height: 17vw;
+}
+.cards h1{
+    font-size: 2vw;
+    
+}
+.cards p{
+    font-size: 1.2vw;
+    text-align: center;
+    padding: 0 11%;
+    
+}
+.icon_cards{
+    width: 4.5vw;
+}
+div.work{
+    /* background-image: url("/images/FONDO2.png"); */
+    padding: 5% 3%;
+    /* background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    flex-direction: column; */
+}
+.work h1.intro{
+    visibility: inherit;
+    white-space: pre;
+}
+@keyframes  mostrar_my_work{
+    to{font-size: 4rem;}
+    from{font-size: 1rem;}
+}
+
+.work h1.intro, .skills .intro{
+    font-family:'Prompt', sans-serif;
+    text-align: left;
+    font-size: 4rem;
+    color: white;
+    font-weight:bold;
+    letter-spacing: 5px;
+}
+.work .column img{
+    width:100%;
+    /* animation: mostrar_my_work_row 0.5s linear forwards;  */
+}
+.work .column{
+    padding:0;
+}
+.work .row{
+    visibility: inherit;
+}
+@keyframes  mostrar_my_work_row{
+    to{transform: scale(1)}
+    from{transform: scale(0.9)}
+}
+.work .cuadrado{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.work .view_project{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    width:100%;
+    height:100%;
+    transition:all .5s ease-in;
+    visibility: hidden;
+}
+.work .cuadrado:hover .view_project{
+    visibility: visible;
+    background-color:#0000007c;
+}
+.work .view_project a{
+    display: flex;
+    text-decoration: none;
+    width:30%;
+    height:30%;
+}
+.work .view_project h3{
+    color: white;
+    font-family:'Prompt', sans-serif;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+    background-color:#0e606b;
+}
+div.skills{
+    padding: 2% 3%;
+    padding-top: 10%;
+}
+.skills .progress{
+    margin-bottom: 1%;
+    height: 2rem;
+    border-radius: 0;
+}
+.skills .azul{
+    background-color: #0E606B !important;
+}
+.skills .morado{
+    background-color: #402158 !important;
+}
+.skills .progress h3{
+    text-align: center;
+    width: 10rem;
+    font-size: 1rem;
+    padding-top: .4rem !important;
+    padding: 0 2rem;
+    color: white;
+}
+.skills .progress .azul.progress-bar{
+    background-color: #00BBD3 !important;
+}
+.skills .progress .morado.progress-bar{
+    background-color: #8747B8 !important;
+}
+@media screen and (max-width: 768px) {
+    div.skills{
+        padding: 2%;
+        padding-top: 10%;
+        
+    }
+    .skills .progress{
+        margin-bottom: 5%;
+        height: 2rem;
+    }
+    .skills .progress h3{
+        text-align: center;
+        width: 5rem;
+        font-size: .7rem;
+        padding-top: .4rem !important;
+        padding: 0;
+        color: white;
+    }
+    div.fondo{
+        background-size: contain;
+    }
+    .hello h1, .hello h3{
+        font-size: 2rem;
+    }
+    .cards, .cards .row, .column{
+        position: static;
+        justify-content:center;
+        align-items:center;
+    }
+    .cards .card{
+        width: 10em !important;
+        height: 10em !important;
+        margin-bottom: 1.5%;
+    }
+    .cards h1{
+        font-size: 1.2rem;
+        
+    }
+    .cards p{
+        font-size: 0.6rem;
+        text-align: center;
+        padding: 0 11%;
+        
+    }
+    .icon_cards{
+        width: 2.5rem;
+    }
+    .work h1.intro{
+        white-space: normal;
+        
+    }
+    .work .column img{
+        max-width: 547px;
+        
+    }
+}

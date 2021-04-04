@@ -1,0 +1,59 @@
+<%- include("template/cabecera", {tituloweb: 'Contact'}) %>
+<div class="container contact pt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <form class="needs-validation pt-lg-5" action="/contact" method="POST" novalidate>
+                <h1 class="mb-1">CONTACT ME</h1>
+                <p>If you have any proposal or question don't hesitate to use the form.</p>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <input name="name" type="text" class="form-control" id="validationCustom01" placeholder="Name" required>
+                        <div class="invalid-feedback">
+                            Llenar el campo
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input name="email" type="email" class="form-control" id="validationCustom02" placeholder="name@example.com" required>
+                        <div class="invalid-feedback">
+                            Llenar el campo
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <input name="phone" type="text" class="form-control" id="validationCustom03" placeholder="Phone" required>
+                        <div class="invalid-feedback">
+                            Llenar el campo
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <input name="subject" type="text" class="form-control" id="validationCustom04" placeholder="Subject" required>
+                    <div class="invalid-feedback">
+                        Llenar el campo
+                    </div>
+                </div></div>
+                <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <textarea name="message" class="form-control" id="validationCustom05" rows="3" placeholder="Message" required></textarea>
+                    <div class="invalid-feedback">
+                        Llenar el campo
+                    </div>
+                </div></div>
+                <button class="btn mb-3" type="submit">Submit form</button>
+            </form>      
+        </div>
+        <div class="social-media col-lg-6 d-flex">
+            <!-- <img src="/images/computadora-desarrollo-web.png" alt=""> -->
+            <h1 class="mt-lg-5 mb-5">SOCIAL MEDIA</h1>
+            <h3>Github</h3>
+            <a href="https://github.com/sharfe25"><img src="/images/github.svg" alt=""></a>
+            <h3>Linkedin</h3>
+            <a href=""><img src="/images/linkedin.svg" alt=""></a>
+        </div>
+    </div>
+    
+</div>
+
+<%- include("template/footer") %>

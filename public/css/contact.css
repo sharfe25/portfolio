@@ -1,0 +1,49 @@
+.container.contact{
+    min-height:calc(100vh - 7.9rem);
+    color: white;
+    font-family:'Prompt', sans-serif;
+    background-image: url(/images/contact.png);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: cover;
+}
+.contact .btn{
+    overflow: hidden;
+    font-family:'Prompt', sans-serif;
+    color:#00BBD3;
+    border: 1px solid #00BBD3;
+    border-radius: 0;
+    padding:1% 5%;
+    transition: all .5s ease-in;
+    animation: aparecer_button .5s linear forwards;
+    margin-bottom: .5rem;
+}
+@keyframes aparecer_button {
+    to{transform: scale(1)}
+    from{transform: scale(0.5)}
+}
+.contact .btn:hover{
+    color:#000000;
+    background-color:  #00BBD3;
+}
+.contact .social-media{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact .social-media h1{
+    border-bottom: 1px solid white;
+}
+.contact .social-media img{
+    width:2rem;
+    margin: 1rem 0;
+}
+@media screen and (max-width: 768px) {
+    .contact form{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact .btn{
+        background-color: #00000085;
+    }
+}
